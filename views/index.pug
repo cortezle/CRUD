@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-5
+        .card
+          .card-body
+            form(action='/add' METHOD='POST')
+              .form-group
+                input(type='text' name="title" placeholder="insert" class="form-control")
+              .form-group
+                textarea(name='descripcion' cols='80' placeholder='insert' class="form-control")
+              button(type="summit" class="btn btn-primary btn-blog") ADD
+      .col-md-7
+        table(class="table table-bordered table-hover")
+          .thead
+            .tr
+              th N
+              th Title
+              th Description
+              th operaciones
+          .tbody
+
